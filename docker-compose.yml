@@ -1,9 +1,8 @@
 version: '3'
 services:
-    web:
-      build: Dockerfile.dev
+  web:
+    build:
+      context: .
+        dockerfile: Dockerfile
       ports:
-       - "3000:3000"
-      volumes:
-       - /data/frontend/node_modules
-       - .:/data/frontend
+        - '80:80'
